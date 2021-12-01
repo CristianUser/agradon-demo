@@ -1,8 +1,11 @@
-version: '2'
+version: '3'
 services:
-  mongo:
-    image: mongo:4.2
-    volumes:
-      - ./mongo/data:/data/db
+  db:
+    image: postgres:13
+    restart: always
     ports:
-      - '27017-27019:27017-27019'
+      - 5432:5432
+    environment:
+      POSTGRES_DB: agradon-demo
+      POSTGRES_PASSWORD: agradon
+      POSTGRES_USER: agradon

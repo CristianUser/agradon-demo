@@ -1,6 +1,6 @@
 /* eslint-disable one-var */
 const LocalStrategy = require('passport-local').Strategy,
-  UserModel = require('agradon/mongoose').model('User');
+  UserModel = require('mongoose').model('User');
 
 const localStrategy = new LocalStrategy(
   {
